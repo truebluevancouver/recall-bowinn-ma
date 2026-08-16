@@ -1,4 +1,18 @@
-['reference-match.css?v=4','readability.css?v=1'].forEach(href=>{if(!document.querySelector(`link[href="${href}"]`)){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l)}});
+['reference-match.css?v=4','readability.css?v=2'].forEach(href=>{if(!document.querySelector(`link[href="${href}"]`)){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l)}});
+
+const forceSignStyle=document.createElement('style');
+forceSignStyle.textContent=`
+#sign .form{background:#ffffff!important;color:#142033!important}
+#sign .form *{color:#142033!important}
+#sign .form label{display:block!important;color:#142033!important;font-size:18px!important;font-weight:800!important;opacity:1!important;visibility:visible!important}
+#sign .form input{display:block!important;width:100%!important;min-height:52px!important;background:#ffffff!important;color:#111827!important;border:2px solid #98a2b3!important;font-size:18px!important;font-weight:600!important;opacity:1!important;-webkit-text-fill-color:#111827!important}
+#sign .form input::placeholder{color:#667085!important;opacity:1!important}
+#sign .form .btn,#sign .form button{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;background:#c51f2d!important}
+#sign .head h2{color:#ffffff!important}
+#sign .eyebrow{color:#f1c766!important}
+`;
+document.head.appendChild(forceSignStyle);
+
 const applyImage=(selector,src,position='center')=>{document.querySelectorAll(selector).forEach(el=>{el.style.backgroundImage=`url('${src}')`;el.style.backgroundSize='cover';el.style.backgroundPosition=position;el.style.backgroundRepeat='no-repeat'})};
 applyImage('.riding-map','949ea614-f9a5-40ed-b8c8-67d624c22e9e.png','center');
 applyImage('.bbq-photo','cd34ea15-e9c9-4f80-8677-8fd34706819d.png','center');
