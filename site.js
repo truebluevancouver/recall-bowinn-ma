@@ -16,6 +16,10 @@ forceSignStyle.textContent=`
 `;
 document.head.appendChild(forceSignStyle);
 
+const topCleanupStyle=document.createElement('style');
+topCleanupStyle.textContent='.utility,.campaign-header{display:none!important}';
+document.head.appendChild(topCleanupStyle);
+
 const signForm=document.querySelector('#sign form');
 if(signForm){
   const fields=[
