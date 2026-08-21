@@ -20,6 +20,25 @@ const topCleanupStyle=document.createElement('style');
 topCleanupStyle.textContent='.utility,.campaign-header{display:none!important}';
 document.head.appendChild(topCleanupStyle);
 
+const donateStyle=document.createElement('style');
+donateStyle.textContent=`
+.campaign-donate-cta{background:linear-gradient(135deg,#a70e19,#d82a36);color:#fff;padding:42px 24px;text-align:center;box-shadow:0 12px 36px rgba(7,22,45,.18)}
+.campaign-donate-cta h2{font-family:Arial Black,Impact,sans-serif;font-size:clamp(2rem,5vw,3.5rem);line-height:1;margin:0 0 12px;text-transform:uppercase}
+.campaign-donate-cta p{max-width:720px;margin:0 auto 22px;font-size:1.05rem;color:#fff}
+.campaign-donate-cta .big-donate-btn{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#a70e19;text-decoration:none;font-family:Arial Black,Impact,sans-serif;font-size:1.35rem;text-transform:uppercase;padding:18px 42px;border-radius:7px;box-shadow:0 10px 28px rgba(0,0,0,.2);transition:.2s ease}
+.campaign-donate-cta .big-donate-btn:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.26)}
+@media(max-width:600px){.campaign-donate-cta{padding:34px 18px}.campaign-donate-cta .big-donate-btn{width:100%;max-width:360px;font-size:1.15rem;padding:17px 22px}}
+`;
+document.head.appendChild(donateStyle);
+
+const hero=document.querySelector('.hq-hero');
+if(hero && !document.querySelector('.campaign-donate-cta')){
+  const donate=document.createElement('section');
+  donate.className='campaign-donate-cta';
+  donate.innerHTML='<h2>Support the Campaign</h2><p>Your contribution helps support campaign materials, outreach and organizing across North Vancouver–Lonsdale.</p><a class="big-donate-btn" href="https://gr1qw52tdo.zite.so/" target="_blank" rel="noopener">♡ Donate to the Campaign</a>';
+  hero.insertAdjacentElement('afterend',donate);
+}
+
 const signForm=document.querySelector('#sign form');
 if(signForm){
   const fields=[
