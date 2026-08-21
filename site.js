@@ -17,7 +17,18 @@ forceSignStyle.textContent=`
 document.head.appendChild(forceSignStyle);
 
 const topCleanupStyle=document.createElement('style');
-topCleanupStyle.textContent='.utility,.campaign-header{display:none!important}';
+topCleanupStyle.textContent=`
+.utility,.campaign-header{display:none!important}
+.feature-strip{display:none!important}
+.hq-hero{min-height:500px!important}
+.hq-hero-grid{grid-template-columns:minmax(0,860px)!important;justify-content:center!important;padding:72px 0!important}
+.hq-hero-grid .recall-seal,.hq-hero-grid .priority-panel{display:none!important}
+.hero-copy{padding-left:0!important;text-align:center!important;margin:0 auto!important}
+.hero-copy h1{margin-left:auto!important;margin-right:auto!important;max-width:850px!important}
+.hero-copy p{margin-left:auto!important;margin-right:auto!important;max-width:700px!important;font-size:1.08rem!important}
+.hero-copy .actions{justify-content:center!important}
+@media(max-width:700px){.hq-hero{min-height:440px!important}.hq-hero-grid{padding:48px 0!important}.hero-copy{padding:0 8px!important}.hero-copy h1{font-size:clamp(2.4rem,12vw,4rem)!important}}
+`;
 document.head.appendChild(topCleanupStyle);
 
 const donateStyle=document.createElement('style');
