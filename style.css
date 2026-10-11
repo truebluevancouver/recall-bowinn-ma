@@ -13,3 +13,105 @@
   max-width: 100%;
   height: auto;
 }
+
+
+/* 2026 visual refresh: cleaner navigation, calmer spacing, stronger mobile usability */
+:root{--navy:#081a34;--navy2:#10345d;--red:#c51f2d;--gold:#e6b75a;--ink:#15243a;--muted:#5c6879}
+body{background:#f7f8fa;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}
+.wrap{width:min(1200px,calc(100% - 40px));}
+.utility{background:#07152d;font-size:.76rem}
+.campaign-header{display:block!important;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);box-shadow:0 5px 22px rgba(7,22,45,.07)}
+.campaign-nav{min-height:86px;gap:28px}
+.campaign-logo{width:230px;min-width:230px}
+.campaign-nav nav{gap:8px}
+.campaign-nav nav a{font-size:.72rem;padding:9px 10px;border-radius:6px;transition:background .18s,color .18s}
+.campaign-nav nav a:hover{background:#f5e9ea;color:var(--red)}
+.campaign-nav nav .donate-nav{padding:12px 17px;color:#fff;background:var(--red);box-shadow:none}
+.campaign-nav nav .donate-nav:hover{background:#a90f1c;color:#fff}
+.hq-hero{min-height:500px;background:radial-gradient(circle at 74% 20%,rgba(65,113,176,.25),transparent 26%),linear-gradient(130deg,#061326 0%,#0c2b50 58%,#07172d 100%)}
+.hq-hero:before{width:9px;left:0;transform:none}
+.hq-hero-grid{grid-template-columns:1.15fr .7fr 1fr;gap:30px;padding:64px 0}
+.hero-copy{padding-left:20px}
+.hero-kicker{display:inline-block;padding:7px 12px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.07);font-size:.75rem;letter-spacing:.09em}
+.hero-copy h1{font-size:clamp(3rem,5vw,5.3rem);letter-spacing:-.05em;line-height:.96}
+.hero-copy h1 em{border-radius:6px;padding:5px 10px 8px}
+.hero-copy p{font-size:1.04rem;line-height:1.75;color:#e2eaf4}
+.btn{border-radius:8px;padding:14px 20px}
+.primary{background:linear-gradient(180deg,#dc2b39,#b7101d);box-shadow:0 8px 20px rgba(197,31,45,.2)}
+.feature-strip{display:block!important;padding:30px 0 42px;background:#f7f8fa}
+.feature-grid{gap:20px}
+.feature-card{border:1px solid #e1e6ed;border-radius:12px;box-shadow:0 8px 24px rgba(7,22,45,.06)}
+.feature-image{height:210px}
+.feature-copy{padding:18px 20px 20px;font-size:.92rem}
+.endorsement-band{padding:56px 0;background:linear-gradient(140deg,#07172f,#0c2b50)}
+.endorsement-card{border-radius:12px;box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.content-section,.pledge-section{padding:76px 0}
+.head{margin-bottom:34px}
+.head h2{letter-spacing:-.035em}
+.card,.form,.news-feature,.photo-feature,.event-card{border-radius:12px}
+.card{box-shadow:0 7px 24px rgba(7,22,45,.055);border-color:#e2e7ee}
+.issue{border-top-width:3px}
+.record{border-left-width:3px}
+.news-feature{box-shadow:0 10px 30px rgba(7,22,45,.08)}
+.news-art{background:linear-gradient(145deg,#081c38,#bf1f2c)}
+.form{box-shadow:0 8px 26px rgba(7,22,45,.07);border-color:#e1e6ed}
+input,textarea,select{border-radius:8px;padding:13px 14px}
+input:focus,textarea:focus,select:focus{outline:3px solid rgba(36,100,180,.16);border-color:#376ca9}
+.newsletter-inner form{gap:10px}
+.newsletter-inner input{min-height:46px}
+.newsletter-inner button{border-radius:7px;min-height:46px}
+.action-rail{display:none!important}
+footer{padding:42px 0}
+.reveal{opacity:1;transform:none}
+@media(max-width:1180px){
+ .campaign-nav{gap:16px}
+ .campaign-logo{width:200px;min-width:200px}
+ .campaign-nav nav{gap:2px}
+ .campaign-nav nav a{font-size:.67rem;padding:8px 7px}
+ .hq-hero-grid{grid-template-columns:1fr .7fr}
+ .priority-panel{grid-column:1/-1;margin-left:20px}
+}
+@media(max-width:900px){
+ .campaign-nav{align-items:center;position:relative}
+ .campaign-logo{width:auto;min-width:0}
+ .menu{display:block;margin-left:auto;color:var(--navy);padding:8px}
+ .campaign-nav nav{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:16px;border:1px solid #e5e9ef;border-radius:12px;box-shadow:0 18px 40px rgba(7,22,45,.16);flex-direction:column;align-items:stretch;gap:4px}
+ .campaign-nav nav.open{display:flex}
+ .campaign-nav nav a{font-size:.82rem;padding:11px 12px}
+ .campaign-nav nav .donate-nav{text-align:center;justify-content:center}
+ .hq-hero-grid{grid-template-columns:1fr}
+ .hero-copy{padding-left:0}
+ .recall-seal{padding:10px 0}
+ .priority-panel{grid-column:auto;margin-left:0}
+ .feature-grid,.endorsement-grid,.grid2,.riding-layout,.event-grid,.pledge-layout,.footer-grid{grid-template-columns:1fr}
+ .action-rail{display:none}
+}
+@media(max-width:620px){
+ .wrap{width:calc(100% - 28px)}
+ .utility{display:none}
+ .campaign-nav{min-height:76px}
+ .logo-main{font-size:1.35rem}
+ .logo-top{font-size:1rem}
+ .campaign-logo small{font-size:.55rem}
+ .campaign-nav nav{top:70px}
+ .hq-hero{min-height:auto}
+ .hq-hero-grid{padding:48px 0}
+ .hero-copy h1{font-size:clamp(2.6rem,13vw,4rem)}
+ .hero-copy p{font-size:1rem}
+ .hero-copy .actions{gap:10px}
+ .hero-copy .actions .btn{width:100%;min-width:0}
+ .seal-inner{width:190px;height:190px}
+ .seal-inner strong{font-size:1.45rem}
+ .content-section,.pledge-section{padding:54px 0}
+ .head h2{font-size:2.35rem}
+ .endorsement-card{grid-template-columns:1fr}
+ .endorsement-photo{min-height:240px}
+ .news-feature,.photo-feature{grid-template-columns:1fr}
+ .photo-main{min-height:300px}
+ .newsletter-inner{align-items:stretch}
+ .newsletter-inner>div{align-items:flex-start;flex-direction:column;gap:5px}
+ .newsletter-inner form{display:grid;grid-template-columns:1fr}
+ .newsletter-inner button{padding:12px}
+ .form{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.feature-card,.card{transition:none}}
