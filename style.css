@@ -57,3 +57,20 @@ img, input, select, textarea, button { max-width: 100%; }
  .guide-links { grid-template-columns: 1fr; }
  .guide-links a { padding: 12px; }
 }
+
+
+/* Editorial leadership portrait: monochrome, subdued and clearly attributed. */
+.leadership-feature { padding: 68px 0; background: linear-gradient(120deg,#101318,#252a31); color: #f4f5f6; }
+.leadership-layout { display: grid; grid-template-columns: minmax(260px,.8fr) minmax(0,1.2fr); align-items: center; gap: clamp(30px,6vw,76px); }
+.leadership-portrait { position: relative; max-width: 390px; overflow: hidden; background: #1a1d22; border: 1px solid rgba(255,255,255,.13); box-shadow: 0 24px 55px rgba(0,0,0,.35); }
+.leadership-portrait::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(4,7,12,.08) 25%,rgba(4,7,12,.72) 100%); pointer-events: none; }
+.leadership-portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; filter: grayscale(100%) brightness(.68) contrast(1.16); }
+.portrait-label { position: absolute; z-index: 1; left: 18px; right: 18px; bottom: 18px; color: #fff; font-size: .65rem; font-weight: 800; letter-spacing: .12em; line-height: 1.5; }
+.leadership-copy .eyebrow { color: #d3b46a; }
+.leadership-copy h2 { margin: 0 0 20px; color: #fff; font-family: Oswald,sans-serif; font-size: clamp(2.9rem,5.8vw,5rem); line-height: .98; text-transform: uppercase; }
+.leadership-copy h2 span { color: #c9cdd2; }
+.leadership-copy>p:not(.eyebrow):not(.portrait-credit) { max-width: 570px; color: #c2c7cf; font-size: .98rem; line-height: 1.8; margin: 0 0 25px; }
+.leadership-copy .button-ghost { border-color: rgba(255,255,255,.35); color: #fff; }
+.leadership-copy .button-ghost:hover { background: rgba(255,255,255,.1); }
+.portrait-credit { margin: 22px 0 0; color: #939ba6; font-size: .68rem; }
+@media(max-width:760px) { .leadership-feature { padding: 52px 0; } .leadership-layout { grid-template-columns: 1fr; gap: 28px; } .leadership-portrait { width: min(100%,360px); } .leadership-copy h2 { font-size: clamp(2.8rem,10vw,4rem); } }
