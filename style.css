@@ -30,3 +30,30 @@ img, input, select, textarea, button { max-width: 100%; }
   .site-form label { overflow-wrap: anywhere; }
   .newsletter-form input, .site-form input, .site-form select, .site-form textarea { min-width: 0; }
 }
+
+
+/* Clearer page directory: a quick, scannable guide to the main sections. */
+.site-guide { position: relative; z-index: 2; background: #f4f6f9; border-bottom: 1px solid #e2e7ee; padding: 30px 0; }
+.site-guide-inner { display: grid; grid-template-columns: .72fr 1.8fr; gap: 30px; align-items: center; }
+.site-guide-heading h2 { margin: 5px 0 7px; color: var(--navy); font-family: Oswald, sans-serif; font-size: 1.65rem; line-height: 1.1; text-transform: uppercase; }
+.site-guide-heading p { margin: 0; color: var(--muted); font-size: .82rem; }
+.guide-kicker { color: var(--red); font-size: .63rem; font-weight: 800; letter-spacing: .15em; }
+.guide-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.guide-links a { display: grid; grid-template-columns: 30px minmax(0, 1fr) 18px; align-items: center; gap: 11px; min-width: 0; padding: 13px 14px; border: 1px solid #e0e5ec; border-radius: 9px; background: #fff; color: var(--navy); text-decoration: none; transition: border-color .18s, transform .18s, box-shadow .18s; }
+.guide-links a:hover { border-color: #c5cfdd; transform: translateY(-2px); box-shadow: 0 7px 18px rgba(9,26,51,.07); }
+.guide-number { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 7px; background: #f8e8e9; color: var(--red); font-family: Oswald, sans-serif; font-size: .78rem; }
+.guide-links strong, .guide-links small { display: block; overflow-wrap: anywhere; }
+.guide-links strong { font-size: .78rem; line-height: 1.25; }
+.guide-links small { margin-top: 3px; color: var(--muted); font-size: .68rem; line-height: 1.35; }
+.guide-links b { color: var(--red); font-size: 1rem; text-align: right; }
+@media (max-width: 900px) {
+ .site-guide-inner { grid-template-columns: 1fr; gap: 18px; }
+ .site-guide-heading { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; }
+ .site-guide-heading h2 { margin: 0; }
+ .site-guide-heading p { flex-basis: 100%; margin-top: 5px; }
+}
+@media (max-width: 520px) {
+ .site-guide { padding: 23px 0; }
+ .guide-links { grid-template-columns: 1fr; }
+ .guide-links a { padding: 12px; }
+}
