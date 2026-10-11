@@ -74,3 +74,21 @@ img, input, select, textarea, button { max-width: 100%; }
 .leadership-copy .button-ghost:hover { background: rgba(255,255,255,.1); }
 .portrait-credit { margin: 22px 0 0; color: #939ba6; font-size: .68rem; }
 @media(max-width:760px) { .leadership-feature { padding: 52px 0; } .leadership-layout { grid-template-columns: 1fr; gap: 28px; } .leadership-portrait { width: min(100%,360px); } .leadership-copy h2 { font-size: clamp(2.8rem,10vw,4rem); } }
+
+
+/* Restore the riding map and the original neighbourhood details in a visible, responsive section. */
+.restored-riding { background: #f4f0e8; }
+.riding-restored-layout { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr); gap:28px; align-items:stretch; }
+.riding-restored-map { margin:0; min-width:0; overflow:hidden; border:1px solid #d9d5cd; border-radius:14px; background:#e5e8e8; box-shadow:0 14px 34px rgba(9,26,51,.10); }
+.riding-restored-map img { display:block; width:100%; height:100%; min-height:400px; max-height:590px; object-fit:contain; background:#e9ecee; }
+.riding-restored-map figcaption { padding:12px 15px; background:#fff; color:#687386; font-size:.72rem; line-height:1.5; }
+.riding-restored-details { padding:30px; border:1px solid #ded9ce; border-radius:14px; background:#fff; }
+.riding-restored-details h3 { margin:0 0 18px; color:var(--navy); font-size:1.45rem; }
+.riding-restored-details ul { list-style:none; margin:0; padding:0; }
+.riding-restored-details li { position:relative; padding:11px 0 11px 24px; border-bottom:1px solid #edf0f3; color:#4b586a; font-size:.88rem; line-height:1.45; }
+.riding-restored-details li:before { content:'•'; position:absolute; left:4px; color:var(--red); font-weight:900; }
+.riding-stat { display:flex; flex-direction:column; gap:5px; margin:22px 0 8px; padding:17px; border-radius:9px; background:#f5f6f8; }
+.riding-stat strong { color:var(--navy); font-family:Oswald,sans-serif; font-size:1.8rem; line-height:1.1; }
+.riding-stat span { color:#6d7888; font-size:.73rem; line-height:1.5; }
+.riding-restored-details .text-link { margin-top:14px; line-height:1.5; }
+@media(max-width:760px) { .riding-restored-layout { grid-template-columns:1fr; } .riding-restored-map img { min-height:280px; max-height:440px; } .riding-restored-details { padding:22px; } }
