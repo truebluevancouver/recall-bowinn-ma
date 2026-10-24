@@ -67,4 +67,100 @@
 <section class="section section-light contact-section" id="contact"><div class="container contact-layout"><div><p class="eyebrow">Contact</p><h2>Have a question<br><span>or an idea?</span></h2><p>Send a message, share a useful source, or ask how you can contribute.</p><div class="contact-email"><span class="contact-icon">✉</span><div><small>Email the initiative</small><a href="mailto:RecallBowinnMa@gmail.com">RecallBowinnMa@gmail.com</a></div></div></div>
 <form class="site-form contact-form" action="https://formsubmit.co/RecallBowinnMa@gmail.com" method="POST"><input type="hidden" name="_subject" value="Website Contact Message"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://recallbowinnma.ca/#contact"><input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true"><label>Full name<input name="Full name" autocomplete="name" required></label><label>Email address<input type="email" name="email" autocomplete="email" required></label><label>Message<textarea name="Message" rows="5" required></textarea></label><button class="button button-dark button-submit" type="submit">Send message <span>→</span></button><p class="privacy-note">This form is for general inquiries and volunteer interest, not for submitting an official petition signature.</p></form></div></section>
 </main>
-<footer class="site-footer"><div class="container footer-main"><a class="brand brand-footer" href="#home"><span class="brand-mark" aria-hidden="true">R<span>✦</span></span><span class="brand-copy"><strong>RECALL BOWINN MA</strong><small>NORTH VANCOUVER–LONSDALE</small></span></a><p>A community-led accountability initiative focused on local concerns, transparency and public participation.</p><div class="footer-links"><a href="#priorities">Priorities</a><a href="#updates">Updates</a><a href="#get-involved">Get involved</a><a href="#contact">Contact</a><a href="https://gr1qw52tdo.zite.so/" target="_blank" rel="noopener noreferrer">Donate ↗</a><a href="https://elections.bc.ca/events-services/recall/" target="_blank" rel="noopener noreferrer">Elections BC ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Recall Bowinn Ma initiative</span><span>Political opinions on this site are those of the initiative.</span><span>Authorized by Eileen Smith, registered sponsor under the Recall and Initiative Act · 604-764-5579</span></div></footer><script src="/site.js?v=20261011-5"></script></body></html>
+<footer class="site-footer"><div class="container footer-main"><a class="brand brand-footer" href="#home"><span class="brand-mark" aria-hidden="true">R<span>✦</span></span><span class="brand-copy"><strong>RECALL BOWINN MA</strong><small>NORTH VANCOUVER–LONSDALE</small></span></a><p>A community-led accountability initiative focused on local concerns, transparency and public participation.</p><div class="footer-links"><a href="#priorities">Priorities</a><a href="#updates">Updates</a><a href="#get-involved">Get involved</a><a href="#contact">Contact</a><a href="https://gr1qw52tdo.zite.so/" target="_blank" rel="noopener noreferrer">Donate ↗</a><a href="https://elections.bc.ca/events-services/recall/" target="_blank" rel="noopener noreferrer">Elections BC ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Recall Bowinn Ma initiative</span><span>Political opinions on this site are those of the initiative.</span><span>Authorized by Eileen Smith, registered sponsor under the Recall and Initiative Act · 604-764-5579</span></div></footer>
+<script src="/site.js?v=20261011-5"></script>
+<!-- Investigative Report Popup -->
+<style>
+  #report-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(3, 12, 27, 0.82);
+  }
+  #report-popup .popup-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 34px 26px 28px;
+    border-radius: 14px;
+    background: #fff;
+    color: #14243a;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+    font-family: inherit;
+  }
+  #report-popup .popup-close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #14243a;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  #report-popup .popup-label {
+    color: #1c4587;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  #report-popup h2 {
+    margin: 14px 0;
+    font-size: clamp(24px, 5vw, 32px);
+    line-height: 1.2;
+  }
+  #report-popup p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  #report-popup .popup-learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 13px 21px;
+    border-radius: 6px;
+    background: #1c4587;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  #report-popup .popup-learn-more:hover {
+    background: #123365;
+  }
+</style>
+<div id="report-popup" role="dialog" aria-modal="true" aria-labelledby="report-popup-title">
+  <div class="popup-box">
+    <button type="button" class="popup-close" id="report-popup-close" aria-label="Close announcement">&times;</button>
+    <p class="popup-label">Campaign Investigation</p>
+    <h2 id="report-popup-title">Questions About Alleged Statements by MLA Bowinn Ma</h2>
+    <p>Read the campaign's report and review the available documentation and sources.</p>
+    <a class="popup-learn-more" href="#updates" id="report-popup-learn-more">Learn More &rarr;</a>
+  </div>
+</div>
+<script>
+(function () {
+  var popup = document.getElementById("report-popup");
+  var closeButton = document.getElementById("report-popup-close");
+  var learnMore = document.getElementById("report-popup-learn-more");
+  if (!popup || !closeButton || !learnMore) return;
+  function closeReportPopup() {
+    popup.style.display = "none";
+  }
+  closeButton.addEventListener("click", closeReportPopup);
+  learnMore.addEventListener("click", closeReportPopup);
+  popup.addEventListener("click", function (event) {
+    if (event.target === popup) closeReportPopup();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeReportPopup();
+  });
+})();
+</script>
+</body>
+</html>
